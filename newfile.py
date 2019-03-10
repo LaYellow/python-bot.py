@@ -203,15 +203,7 @@ async def howretard( *args):
         areis = 'is'
     for word in args:
         output += word
-    await client.say(':clap: **{} {} {}% retard **'.format(output, areis ,g))
-    
-@client.event
-async def on_message(message):
-    
-    await client.process_commands(message)
-    if message.content.startswith('/whoisgay'):
-        userID = message.author.id
-        await client.send_message(message.channel, '<@%s> **is gay** ' % (userID))
+    await client.say(':clap: **{} {} {}% retard **'.format(output, areis ,g)
 
 client.loop.create_task(change_status())
 client.run('NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8')
