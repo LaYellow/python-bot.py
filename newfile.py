@@ -205,5 +205,5 @@ async def howretard( *args):
         output += word
     await client.say(':clap: **{} {} {}% retard **'.format(output, areis ,g)
 
-client.loop.create_task(change_status())
+client.loop.create_task(change_status()
 client.run('NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8')
