@@ -214,4 +214,4 @@ async def on_message(message):
         await client.send_message(message.channel, '<@%s> **is gay** ' % (userID))
 
 client.loop.create_task(change_status())
-client.run(str(os.environ.get('BOT_TOKEN'))
+client.run('NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8')
