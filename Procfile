@@ -1,1 +1,1 @@
-worker: Python newfile.py
+worker: Python bot.py
