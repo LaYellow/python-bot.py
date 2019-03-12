@@ -212,4 +212,4 @@ async def avatar(ctx, user: discord.Member):
     await client.say(embed=embed)
     
 client.loop.create_task(change_status())
-client.run(config.pubtoken)
+client.run('NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8')
