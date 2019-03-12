@@ -14,7 +14,7 @@ my_token = 'NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8'
 client = commands.Bot(command_prefix = '/')
 
 client.remove_command('help')
-status = ['/help for commands', 'with LaYellow#9207', "LaYellow Bot"]
+status = ['/help for commands', 'with LaYellow#9207', ]
 
 players = {}
 
@@ -26,7 +26,7 @@ async def change_status():
     while not client.is_closed:
         current_status = next(msgs)
         await client.change_presence(game=discord.Game(name =current_status))
-        await asyncio.sleep(10)
+        await asyncio.sleep(5)
 
 @client.event
 async def on_ready():
@@ -76,7 +76,7 @@ async def purge(ctx, amount = 10):
     async for message in client.logs_from(channel, limit=int(amount) +1):
         messages.append(message)
     await client.delete_messages(messages)
-    await client.say(str(amount) + ' messages were deleted so ya! ')
+    await client.say(str(amount) + ' **messages were deleted so ya!** ')
 
 
 @client.command(pass_context = True)
