@@ -7,6 +7,7 @@ from itertools import cycle
 import time
 import youtube_dl
 import random
+import config
 
 my_token = 'NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8'
 
@@ -212,4 +213,4 @@ async def avatar(ctx, user: discord.Member):
     await client.say(embed=embed)
     
 client.loop.create_task(change_status())
-client.run('NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8')
+client.run(config.pubtoken)
