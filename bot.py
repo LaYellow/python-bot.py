@@ -7,7 +7,6 @@ from itertools import cycle
 import time
 import youtube_dl
 import random
-import requests
 import os
 
 my_token = 'NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8'
