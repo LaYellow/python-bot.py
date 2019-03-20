@@ -149,6 +149,7 @@ async def unban(ctx, userName: discord.User):
     await client.say("__**Successfully User Has Been Unbanned**__")
 
 @client.command()
+@commands.has_permissions(administrator=True)
 async def say(*args):
         output = ''
         for word in args:
