@@ -152,6 +152,7 @@ async def unban(ctx, userName: discord.User):
 @client.command(pass_context = True)
 async def say(ctx, *args):
     mesg = ' '.join(args)
+    await asyncio.sleep(0.2)
     await client.delete_message(ctx.message)
     return await client.say(mesg)
 
