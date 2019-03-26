@@ -39,10 +39,11 @@ async def on_ready():
 
 
 @client.event
-async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name='Newcomer')
-    await client.add_roles(member, role)
-
+async def on_member_join(self, member):
+        guild = member.guild
+        if guild.system_channel is not None:
+            to_send = 'Welcome {0.mention} to {1.name}!'.format(member, guild)
+            await guild.system_channel.send(to_send)
 
 @client.event
 async def on_message(message):
@@ -238,7 +239,7 @@ async def serverid(ctx):
 async def dice():
 	dice = random.choice(['1','2','3','4','5','6'])
 	await client.say(dice)
-
+	
 
 client.loop.create_task(change_status())
 client.run(str(os.environ.get('TOKEN')))
