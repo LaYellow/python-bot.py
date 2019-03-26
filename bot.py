@@ -69,7 +69,10 @@ async def help(ctx):
     embed.add_field(name ='/render', value ='Show a Growtopia world.', inline=False)
     embed.add_field(name ='/howgay', value ='R8 Gay machine.', inline=False)
     embed.add_field(name ='/howretard', value ='R8 Retard machine.', inline=False)
- 
+    embed.add_field(name ='/serverid', value ='Send ID of the current server you are in.', inline=False)
+    embed.add_field(name ='/ping', value ='Send speed of the current bot network.', inline=False)
+    embed.add_field(name ='/dice', value ='Play a dice game when youre bored number between 1-6.', inline=False)
+    embed.add_field(name ='/invite', value ='Invite the bot to your server.', inline=False)
 
     await client.send_message(author, embed=embed)
 
