@@ -153,14 +153,11 @@ async def unban(ctx, userName: discord.User):
     await client.kick(userName)
     await client.say("__**Successfully User Has Been Unbanned**__")
 
-@client.command()
-@commands.has_permissions(administrator=True)
-async def say(*args):
-        output = ''
-        for word in args:
-            output += word
-            output += ' '
-        await client.say(output)
+@client.command(pass_context = True)
+async def say(ctx, *args):
+    mesg = ' '.join(args)
+    await client.delete_message(ctx.message)
+    return await client.say(mesg)
 
 
 @client.command(pass_context=True)
