@@ -19,7 +19,7 @@ my_token = 'NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8'
 client = commands.Bot(command_prefix = '/')
 
 client.remove_command('help')
-status = ['/help for commands', 'with LaYellow#9207', ]
+status = ['with /help | commands', 'with LaYellow#9207', ]
 
 players = {}
 
