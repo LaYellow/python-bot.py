@@ -7,7 +7,12 @@ from itertools import cycle
 import time
 import youtube_dl
 import random
+import re
+import aiohttp
+from datetime import timedelta
+import traceback
 import os
+from random import choice, randint
 
 my_token = 'NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8'
 
@@ -213,5 +218,27 @@ async def avatar(ctx, user: discord.Member):
     embed.set_image(url=user.avatar_url)
     await client.say(embed=embed)
     
+@client.command()
+async def invite():
+  	"""Bot Invite"""
+  	await client.say('Please check your DMs')
+  	await client.whisper("Add me with this link {}".format(discord.utils.oauth_url(client.user.id)))
+	
+@client.command(pass_context=True)
+async def ping(ctx):
+    t = await client.say('Pong')
+    ms = (t.timestamp-ctx.message.timestamp).total_seconds() * 1000
+    await client.edit_message(t, new_content='{}ms'.format(int(ms)))
+
+@client.command(pass_context=True)
+async def serverid(ctx):
+	  await client.say("```{}```".format(ctx.message.server.id))
+
+@client.command()
+async def dice():
+	dice = random.choice(['1','2','3','4','5','6'])
+	await client.say(dice)
+
+
 client.loop.create_task(change_status())
 client.run(str(os.environ.get('TOKEN')))
