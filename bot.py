@@ -235,9 +235,15 @@ async def dice():
 	
 @client.command(pass_context=True)
 async def developer(ctx):
-    s = await client.say('LaYellow#9207')
+    s = await client.say('```LaYellow#9207```')
     await asyncio.sleep(2)
-    await client.edit_message(s, new_content='Aka the pro coder'.format(int))
+    await client.edit_message(s, new_content='```Aka the pro coder```'.format(int))
+
+@client.command(pass_context=True)
+async def zhenshax(ctx):
+	await client.say('wtf that noob guy')
+	await asyncio.sleep(2)
+	await client.say('i hate b1g him he suck ass')
 
 
 
