@@ -233,6 +233,10 @@ async def dice():
 	dice = random.choice(['1','2','3','4','5','6'])
 	await client.say(dice)
 	
+@client.command()
+async def servercount():
+    """Bot Guild Count"""
+    await client.say("**I'm in {} Server!**".format(len(bot.servers)))
 
 client.loop.create_task(change_status())
 client.run(str(os.environ.get('TOKEN')))
