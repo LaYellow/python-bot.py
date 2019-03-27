@@ -215,7 +215,7 @@ async def avatar(ctx, user: discord.Member):
 @client.command()
 async def invite():
   	"""Bot Invite"""
-  	await client.say('Please check your DMs')
+  	await client.say('```Please check your DMs```')
   	await client.whisper("Add me with this link {}".format(discord.utils.oauth_url(client.user.id)))
 	
 @client.command(pass_context=True)
@@ -234,8 +234,8 @@ async def dice():
 	await client.say(dice)
 	
 @client.command()
-async def servercount():
-        await client.say("**I'm in {} Server!**".format(len(bot.servers)))
+async def developer():
+	await client.say(```'<@%s>'```)
 
 client.loop.create_task(change_status())
 client.run(str(os.environ.get('TOKEN')))
