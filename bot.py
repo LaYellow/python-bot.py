@@ -239,14 +239,5 @@ async def developer(ctx):
     await asyncio.sleep(2)
     await client.edit_message(s, new_content='```Aka the pro coder```'.format(int))
 
-@client.command(pass_context=True)
-async def zhenshax(ctx):
-	await client.say('wtf that noob guy')
-	await asyncio.sleep(2)
-	await client.say('i hate b1g him he suck ass')
-
-
-
-
 client.loop.create_task(change_status())
 client.run(str(os.environ.get('TOKEN')))
