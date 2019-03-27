@@ -233,11 +233,11 @@ async def dice():
 	dice = random.choice(['1','2','3','4','5','6'])
 	await client.say(dice)
 	
-@client.command()
-async def developer():
-	s = await client.say('```LaYellow#9207```')
-	await async.sleep(2)
-	await client.edit_message(s, new_content='```Aka the pro coder```')
+@client.command(pass_context=True)
+async def developer(ctx):
+    s = await client.say('LaYellow#9207')
+    await asyncio.sleep(2)
+    await client.edit_message(s, new_content='Aka the pro coder'.format(int))
 
 
 
