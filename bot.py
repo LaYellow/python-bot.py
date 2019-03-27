@@ -235,7 +235,8 @@ async def dice():
 	
 @client.command()
 async def developer():
-	await client.say(```'<@%s>'```)
+userID2 = message.author.id
+        await client.send_message(message.channel, '<@%s> ***Check DM For Information*** :mailbox_with_mail: ' % (userID2))
 
 client.loop.create_task(change_status())
 client.run(str(os.environ.get('TOKEN')))
