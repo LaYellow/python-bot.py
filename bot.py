@@ -235,7 +235,11 @@ async def dice():
 	
 @client.command()
 async def developer():
-	await client.say('LaYellow#9207')
+	s = await client.say('```LaYellow#9207```')
+	await async.sleep(2)
+	await client.edit_message(s, new_content='```Aka the pro coder```')
+
+
 
 
 client.loop.create_task(change_status())
