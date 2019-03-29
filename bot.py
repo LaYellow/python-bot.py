@@ -241,3 +241,9 @@ async def developer(ctx):
 
 client.loop.create_task(change_status())
 client.run(str(os.environ.get('TOKEN')))
+
+@client.command()
+async def ass():
+	await client.say('You mom gay')
+	await asyncio.sleep(1)
+	await client.say('https://media.discordapp.net/attachments/523038602452795398/560991116829261860/IMG-20190328-WA0018.jpg?width=192&height=138')
