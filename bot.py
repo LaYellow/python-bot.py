@@ -16,7 +16,7 @@ from random import choice, randint
 
 my_token = 'NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8'
 
-client = commands.Bot(command_prefix = '/')
+client = commands.Bot(command_prefix = '/',status=discord.Status.dnd)
 
 client.remove_command('help')
 status = ['with /help | commands', 'with LaYellow#9207', ]
@@ -30,7 +30,7 @@ async def change_status():
 
     while not client.is_closed:
         current_status = next(msgs)
-        await client.change_presence(game=discord.Game(name =current_status, type = 1))
+        await client.change_presence(game=discord.Game(name =current_status))
         await asyncio.sleep(5)
 
 @client.event
