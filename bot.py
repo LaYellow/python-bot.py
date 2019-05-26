@@ -16,7 +16,7 @@ from random import choice, randint
 
 my_token = 'NTQyNTAyNjIzNjY4OTk0MDY5.DzvCIw.JoOolByOgGw3OqT4pnOMf5Xc5E8'
 
-client = commands.Bot(command_prefix = '/',status=discord.Status.dnd)
+client = commands.Bot(command_prefix = '/', status=discord.Status.dnd)
 
 client.remove_command('help')
 status = ['with /help | commands', 'with LaYellow#9207', ]
